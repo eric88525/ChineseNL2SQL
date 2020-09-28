@@ -1,0 +1,5 @@
+cn2an==0.5.7
+numpy==1.18.5
+transformers==3.0.2
+numpy==1.18.5
+pandas==1.0.5
