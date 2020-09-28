@@ -1,9 +1,28 @@
-#  如何使用
+#  NL2SQL
+
+
+
++ install
+
+  ```
+  pip install -r requirements.txt
+  ```
+
++ download model 放在 saved_models/
+
+  ```python
+  # m1
+  https://drive.google.com/file/d/1Lln6HxJ1aNuswQnZrgR681fDdqT4U4dv/view?usp=sharing
+  # m2
+  https://drive.google.com/file/d/1e60AThMqOr3Tad10a6aD3XciJSeFCbEr/view?usp=sharing
+  ```
+
+  
 
 + 引用
 
 ```python
-from N2S import *
+from N2S.model import *
 path1 = './saved_models/M1.pt'
 path2 = './saved_models/M2.pt'
 model_type = 'hfl/chinese-bert-wwm'
@@ -24,7 +43,7 @@ data = {
             ['300050.SZ', '世纪鼎利', 5.6, 12.64, 12.68, 44.3, 2017.0, '配套融资'], 
             ['300050.SZ', '世纪鼎利', 5.6, 12.22, 12.26, 45.82, 2017.0, '融资收购其他资产']]
 }
- ```
+```
 
   
 
@@ -47,5 +66,8 @@ model.go(data)
   增发目的=融资收购其他资产 8.809728024061769e-05
   SELECT COUNT 证券简称 WHERE 定增年度=2017 AND 增发目的=配套融资 
 ```
++ 準確率
 
-  
+![](https://i.imgur.com/TJWh3DQ.png)
+
++ 資料跟天池主辦方要 我怕被告
